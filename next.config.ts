@@ -8,12 +8,12 @@ const nextConfig: NextConfig = {
             {
                 protocol: 'https',
                 hostname: 'flagcdn.com',
-                pathname: '/**', // Match all paths
+                pathname: '/**',
             },
             {
                 protocol: 'https',
                 hostname: 'upload.wikimedia.org',
-                pathname: '/**', // Match all paths
+                pathname: '/**',
             },
         ],
     },

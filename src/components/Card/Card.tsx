@@ -1,17 +1,22 @@
 import React from 'react'
 import {CountryData} from "@/hooks/useFetchCountries";
 import Image from "next/image";
+import {useRouter} from "next/navigation";
+
 
 export interface CountryProps {
     country: CountryData;
     loading: boolean;
 }
 
-const Card = ({country,loading}:CountryProps) => {
+const Card = ({country}:CountryProps) => {
+    const router = useRouter();
     return (
        <>
            {
-               country != undefined && <div className="rounded-lg shadow-md  cursor-pointer">
+               country != undefined && <div className="rounded-lg shadow-md  cursor-pointer" onClick={() => {
+                  router.push(country.name.common)
+               }}>
                    <Image src={country.flags.png} width={100} height={100} alt="" className={"w-full h-72 rounded-t-lg shadow-sm"} objectFit={"cover"}  unoptimized/>
                    <div className={"flex flex-col justify-center p-7 leading-loose"}>
                        <h1 className={"text-2xl font-bold mb-5"}>{country.name.common}</h1>

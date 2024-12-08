@@ -12,7 +12,7 @@ export interface CountryProps {
 
 const CardCountryList = ({countries,loading}:CountryProps) => {
     return (
-        <div className={"grid  lg:grid-cols-4 gap-20 "}>
+        <div className={"grid  lg:grid-cols-4 gap-20 px-5 md:px-0"}>
             {
                 countries.map(country => (
                     <Card country={country} loading={loading} key={country.name.common}/>

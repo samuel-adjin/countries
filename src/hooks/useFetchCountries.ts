@@ -1,5 +1,16 @@
 import {useEffect, useState} from "react";
 
+
+type Currency = {
+    name: string;
+    symbol: string;
+};
+
+type Currencies = {
+    [key: string]: Currency;
+};
+
+
 export interface CountryData {
     flags: {
         png: string;
@@ -7,8 +18,11 @@ export interface CountryData {
         alt: string;
     };
     capital:string[];
+    tld:string[];
     region: string;
+    "subregion":string;
     population: number;
+    currencies: Currencies;
     name: {
         common: string;
         official: string;
