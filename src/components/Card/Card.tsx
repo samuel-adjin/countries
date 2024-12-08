@@ -11,7 +11,7 @@ const Card = ({country,loading}:CountryProps) => {
     return (
        <>
            {
-               country != undefined && <div className="rounded-lg shadow-md  ">
+               country != undefined && <div className="rounded-lg shadow-md  cursor-pointer">
                    <Image src={country.flags.png} width={100} height={100} alt="" className={"w-full h-72 rounded-t-lg shadow-sm"} objectFit={"cover"}  unoptimized/>
                    <div className={"flex flex-col justify-center p-7 leading-loose"}>
                        <h1 className={"text-2xl font-bold mb-5"}>{country.name.common}</h1>
