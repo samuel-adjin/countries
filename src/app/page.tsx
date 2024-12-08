@@ -53,9 +53,11 @@ export default function Home() {
             <div className="mt-10">
                 <CardCountryList countries={visibleCountries} loading={loading} />
             </div>
-            <div className="my-10 flex justify-center" ref={ref}>
-                <Spinner/>
-            </div>
+            { itemsToShow < countries.length &&
+                <div className="my-10 flex justify-center" ref={ref}>
+                    <Spinner/>
+                </div>
+            }
         </div>
     );
 }
