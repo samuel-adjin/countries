@@ -42,6 +42,7 @@ export default function Home() {
 
     useEffect(() => {
         setCountrySearch(filter);
+        setItemsToShow(8)
     }, [filter]);
 
     return (
