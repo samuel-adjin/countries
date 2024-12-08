@@ -36,7 +36,7 @@ const Page =  () => {
                             <h4>Sub Region: {country.subregion}</h4>
                             <h4>Capital: {country.capital}</h4>
                         </div>
-                        <div className="mt-8">
+                        <div className="mt-8 mb-6">
                             <h1 className="">Top Level Domain: {country.tld}</h1>
                             {currencyKey.map((currency,i:number)=> {
                                 return <h1 key={i+currency}>Currency: {country.currencies[currency].name} </h1>
