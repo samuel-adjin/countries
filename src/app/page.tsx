@@ -25,7 +25,7 @@ export default function Home() {
             if (inView && itemsToShow < countries.length) {
                 setItemsToShow((prev) => prev * 2);
             }
-        },2000)
+        },1000)
         return () => clearTimeout(timeout);
     }, [countries.length, inView, itemsToShow]);
 
