@@ -24,7 +24,7 @@ const SearchCountries = ({ setFilter, countries }: ISearchCountries) => {
     useEffect(() => {
             if (debounced !== "") {
                 const filteredByQuery = countries.filter((country) =>
-                    country.name.common.toLowerCase().includes(debounced)
+                    country.name.common.toLowerCase().includes(debounced.toLowerCase())
                 );
                 setFilter(filteredByQuery);
             } else {
